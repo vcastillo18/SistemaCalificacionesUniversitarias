@@ -2,6 +2,6 @@
 
 Integrantes:
 - Karina Pamela Calvillo Haro
-- Víctor Adrián Castillo González -- Líder del equipo
+- __Víctor Adrián Castillo González (líder)__
 - Yuridia Lizbeth Sánchez Medina
 - José Manuel Vázquez Orozco
