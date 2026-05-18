@@ -29,22 +29,22 @@ exports.getStudentsByStatus = (estatus, callback) => {
 
 // Agregar un nuevo estudiante
 exports.addStudent = (studentData, callback) => {
-  const query = 'INSERT INTO estudiantes (correo, id) VALUES (?, ?)';
-  db.query(query, [studentData.correo, studentData.id], callback);
+  const query = 'INSERT INTO estudiantes (matricula, nombre, carrera) VALUES (?, ?, ?)';
+  db.query(query, [studentData.matricula, studentData.nombre, studentData.carrera], callback);
 
 };
 
 // Modificar un estudiante existente
-exports.updateStudent = (id, studentData, callback) => {
-  const query = 'UPDATE estudiantes SET nombre_estudiante = ?, grado = ?, estatus = ? WHERE id = ?';
-  db.query(query, [studentData.nombre_estudiante, studentData.grado, studentData.estatus, id], callback);
+exports.updateStudent = (matricula, studentData, callback) => {
+  const query = 'UPDATE estudiantes SET nombre = ?, carrera = ? WHERE matricula = ?';
+  db.query(query, [studentData.nombre, studentData.carrera, matricula], callback);
 };
 
 
 // Eliminar un estudiante
-exports.deleteStudent = (id, callback) => {
-  const query = 'DELETE FROM estudiantes WHERE id= ?';
-  db.query(query, [id], callback);
+exports.deleteStudent = (matricula, callback) => {
+  const query = 'DELETE FROM estudiantes WHERE matricula= ?';
+  db.query(query, [matricula], callback);
 };
 
 /*module.exports = Estudiante;*/
